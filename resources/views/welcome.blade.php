@@ -9,47 +9,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
+
 <body>
     <div id="app">
-        <div id="login">
+        <div id="register">
             <div id="left">
-                <div id="showcase">
-                    <div class="showcase-content">
-                        <h1 class="showcase-text">
-                            Lorem, ipsum dolor. <strong>together</strong>
-                        </h1>
-                        <a href="#" class="btn secondary-outline-btn">Lorem, ipsum dolor.</a>
-                    </div>
-                </div>
-            </div>
-            <div id="right">
-                <div class="signin">
+                <div class="signup">
                     <div class="logo">
                         <h1>BMS</h1>
                     </div>
                     <form>
+                        <div class="form-group-name">
+                            <label>Firstname</label>
+                            <input type="text" class="text-input">
+                        </div>
+                        <div class="form-group-name form-padding">
+                            <label>Lastname</label>
+                            <input type="text" class="text-input">
+                        </div>
                         <div>
-                            <label>Username or Email</label>
+                            <label>Email</label>
+                            <input type="text" class="text-input">
+                        </div>
+                        <div>
+                            <label>Username</label>
                             <input type="text" class="text-input">
                         </div>
                         <div>
                             <label>Password</label>
                             <input type="password" class="text-input">
                         </div>
-                        <button type="button" class="btn primary-btn">Sign In</button>
+                        <div>
+                            <label>Confirm Password</label>
+                            <input type="password" class="text-input">
+                        </div>
+                        <button type="button" class="btn primary-btn">Sign Up</button>
                     </form>
-                    <div class="links">
-                        <a href="#" class="btn secondary-btn">Forgot Password</a>
-                    </div>
                     <div class="or">
                         <hr class="bar">
-                        <span>OR</span>
+                        <span>Already have an account?</span>
                         <hr class="bar">
                     </div>
-                    <div class="social">
-                        <a href="#" class="btn primary-outline-btn">Sign in with <strong>Facebook</strong> <i class="fa fa-facebook-square"></i></a>
-                        <a href="#" class="btn danger-outline-btn">Sign in with <strong>Google</strong> <i class="fa fa-google-plus-square"></i></a>
-                        <a href="#" class="btn secondary-outline-btn">Create an account</a>
+                    <div class="links">
+                        <a href="#" class="btn secondary-outline-btn">Sign In</a>
                     </div>
                 </div>
                 <footer id="main-footer">
@@ -58,6 +60,16 @@
                         <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
                     </div>
                 </footer>
+            </div>
+            <div id="right">
+                <div id="showcase">
+                    <div class="showcase-content">
+                        <h1 class="showcase-text">
+                            Lorem, ipsum dolor. <strong>together</strong>
+                        </h1>
+                        <a href="#" class="btn secondary-outline-btn">Lorem, ipsum dolor.</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

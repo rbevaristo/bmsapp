@@ -180,3 +180,11 @@ h6 {
 .secondary-alert {
     @include hover-alert($dark);
 }
+
+.invalid-feedback {
+    color: $red;
+
+    small {
+        font-weight: bolder;
+    }
+}

@@ -1,30 +1,11 @@
 @import 'media';
 
-#login {
+#register {
     display: flex;
     flex-direction: row;
+    color: $dark;
 
     #left {
-        flex: 1;
-
-        #showcase {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
-            height: 100vh;
-            text-align: center;
-
-            .showcase-text {
-                font-size: 36px;
-                width: 100%;
-                color: $dark;
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    #right {
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -33,18 +14,13 @@
         height: 100vh;
         color: $dark;
 
-        .signin {
+        .signup {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 80%;
             padding-bottom: 10px;
-
-            form {
-                width: 100%;
-                padding-bottom: 20px;
-            }
 
             .logo {
                 margin-bottom: 4vh;
@@ -55,9 +31,24 @@
                 }
             }
 
+            form {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            .form-group-name {
+                width: 50%;
+                float: left;
+
+                &.form-padding {
+                    padding-left: 20px;
+                    width: 50%;
+                }
+            }
+
             label {
                 font-size: 12px;
-                line-height: 40px;
+                line-height: 30px;
                 font-weight: 500;
             }
 
@@ -68,23 +59,16 @@
                 background: transparent;
                 border: 1px solid $blue;
                 color: $dark;
-                padding: 10px 15px;
-                line-height: 15px;
+                padding: 8px 15px;
+                line-height: 10px;
             }
-
-            .is-invalid {
-                border: 1px solid $red;
-            }
-
 
             .primary-btn {
                 width: 100%;
             }
 
-            .secondary-outline-btn,
             .or,
-            .links,
-            .social {
+            .links {
                 width: 60%;
             }
 
@@ -97,18 +81,8 @@
                     color: $dark;
 
                     &:hover {
-                        color: $blue;
+                        color: $white;
                     }
-                }
-            }
-
-            .social {
-                text-align: center;
-
-                a {
-                    display: block;
-                    width: 100%;
-                    margin: 5px auto;
                 }
             }
 
@@ -132,16 +106,24 @@
             }
         }
     }
-}
 
-#main-footer {
-    color: $dark;
-    text-align: center;
-    font-size: 12px;
-    max-width: 80%;
+    #right {
+        flex: 1;
 
-    a {
-        color: $dark;
-        text-decoration: underline;
+        #showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+            height: 100vh;
+            text-align: center;
+
+            .showcase-text {
+                font-size: 36px;
+                width: 100%;
+                color: $dark;
+                margin-bottom: 15px;
+            }
+        }
     }
 }
