@@ -17,15 +17,17 @@
             <div class="logo">
                 <h1>BMS</h1>
             </div>
-            @if ($errors->has('username') OR $errors->has('password'))
-            <span class="invalid-feedback" role="alert">
-                <small>Invalid Username or Password</small>
-            </span>
-            @endif
+            
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div>
-                    <label>Username or Email</label>
+                    <label>Username or Email
+                        @if ($errors->has('username') OR $errors->has('password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Invalid Username or Password</strong>
+                        </span>
+                        @endif
+                    </label>
                     <input type="text" class="text-input{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username"
                         value="{{ old('username') }}" required autofocus>
                 </div>

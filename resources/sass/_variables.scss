@@ -20,3 +20,23 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $white: #ffffff;
 $dark: #3f3f3f;
+
+
+$purpleLight: #302D43;
+$purpleDark: #282639;
+$neonGreen: #92CF48;
+$lightGrey: #F4F6F9;
+$darkGrey: #EAEDF3;
+$darkGreyBG: #EAEDF3;
+$darkGreyFont: #6C7882;
+$lightGreyBG: #F4F6F9;
+$lightGreyFont: #B8C1CD;
+
+
+// Grid
+$grid-columns: 12;
+$grid-max-width: 1200px;
+$breakpoint-small: "only screen and (min-width: 0px)";
+$breakpoint-medium: "only screen and (min-width: 700px)";
+$breakpoint-large: "only screen and (mid-width: 1008px)";
+$breakpoint-xl: "only screen and (min-width: 1300px)";

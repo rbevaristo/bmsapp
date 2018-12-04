@@ -7,72 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/auth.css')}}">
 </head>
 
 <body>
     <div id="app">
-        <div id="register">
-            <div id="left">
-                <div class="signup">
-                    <div class="logo">
+        <div id="wrapper">
+            <aside id="sideMenu">
+                <nav>
+                    <a href="#" class="active">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span> Home</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                        <span> Files</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                        <span> Bookmark</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span> Calendar</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <span> Users</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <span> Settings</span>
+                    </a>
+                </nav>
+            </aside>
+            <header id="headerNav">
+                <ul>
+                    <li>
+                        <button type="button" class="btn sm-btn" id="sideMenu--toggler">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </li>
+                    <li>
                         <h1>BMS</h1>
+                    </li>
+                </ul>
+                {{-- <div class="row">
+                    <div class="col-md-12 col-sm-12">
+
+                        <div class="user-area">
+                            <div class="search-area">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" placeholder="Search..." class="search">
+                                <span class="border"></span>
+                            </div>
+                            <a href="#" class="notification">
+                                <i class="fa fa-bell"></i>
+                                <span class="circle">3</span>
+                            </a>
+                            <a href="#">
+                                <div class="user-img"></div>
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                        </div>
                     </div>
-                    <form>
-                        <div class="form-group-name">
-                            <label>Firstname</label>
-                            <input type="text" class="text-input">
-                        </div>
-                        <div class="form-group-name form-padding">
-                            <label>Lastname</label>
-                            <input type="text" class="text-input">
-                        </div>
-                        <div>
-                            <label>Email</label>
-                            <input type="text" class="text-input">
-                        </div>
-                        <div>
-                            <label>Username</label>
-                            <input type="text" class="text-input">
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="password" class="text-input">
-                        </div>
-                        <div>
-                            <label>Confirm Password</label>
-                            <input type="password" class="text-input">
-                        </div>
-                        <button type="button" class="btn primary-btn">Sign Up</button>
-                    </form>
-                    <div class="or">
-                        <hr class="bar">
-                        <span>Already have an account?</span>
-                        <hr class="bar">
-                    </div>
-                    <div class="links">
-                        <a href="#" class="btn secondary-outline-btn">Sign In</a>
-                    </div>
-                </div>
-                <footer id="main-footer">
-                    <p>Copyright &copy; 2018, BMS All Rights Reserved</p>
-                    <div>
-                        <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
-                    </div>
-                </footer>
-            </div>
-            <div id="right">
-                <div id="showcase">
-                    <div class="showcase-content">
-                        <h1 class="showcase-text">
-                            Lorem, ipsum dolor. <strong>together</strong>
-                        </h1>
-                        <a href="#" class="btn secondary-outline-btn">Lorem, ipsum dolor.</a>
-                    </div>
-                </div>
-            </div>
+                </div> --}}
+            </header>
         </div>
     </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

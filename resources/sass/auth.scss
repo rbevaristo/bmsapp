@@ -1,0 +1,127 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+@import 'grid';
+// Functions
+@import 'mixins';
+
+
+// Custom
+@import 'global';
+@import 'login/login';
+@import 'register/register';
+
+#wrapper {
+    #sideMenu {
+        background: $darkGrey;
+        max-width: 250px;
+        width: 80px;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        // -webkit-transition: all 0.5s;
+        transition: 0.5s;
+
+
+        &.isOpen {
+            width: 250px;
+            transition: opacity 0s ease-in-out 0s;
+
+            nav {
+                a {
+                    span {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            padding: 20px;
+            color: $dark;
+        }
+
+        nav {
+            a {
+                display: block;
+                color: $dark;
+                text-decoration: none;
+                padding: 15px 30px;
+                font-weight: 300;
+                transition: all .3s ease-in-out;
+
+                span {
+                    display: none;
+                }
+
+                &:hover {
+                    background: $lightGrey;
+                    padding: 15px 30px 15px 25px;
+                    color: $purpleDark;
+
+                    .fa {
+                        color: $purpleDark;
+                    }
+                }
+
+                &.active {
+                    background: $lightGrey;
+                    color: $purpleDark;
+                    border-left: 5px solid $purpleDark;
+                    padding: 15px 30px 15px 25px;
+
+                    .fa {
+                        color: $purpleDark;
+                    }
+                }
+
+                .fa {
+                    color: $dark;
+                    font-size: 1.4rem;
+                    margin-right: 0.8rem;
+                    display: inline-block;
+                    width: 30px;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+    header {
+        background: $darkGrey;
+        color: $dark;
+        transition: all 0.5s;
+        padding: 10px 15px;
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+
+                button {
+                    float: left;
+                    margin: 0 15px;
+                    border: none;
+                    border-radius: 50%;
+                    background: $darkGrey;
+                    color: $dark;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+input:focus {
+    outline: none;
+    background: $lightGrey;
+}

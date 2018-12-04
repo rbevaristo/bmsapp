@@ -4,14 +4,5 @@
 // Variables
 @import 'variables';
 
-// Functions
-@import 'mixins';
-
 // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
-
-
-// Custom
-@import 'global';
-@import 'login/login';
-@import 'register/register';
+@import '~bootstrap/scss/bootstrap';
