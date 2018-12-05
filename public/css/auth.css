@@ -561,6 +561,30 @@ h6 {
   font-weight: bolder;
 }
 
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #282639;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #282639;
+}
+
 @media (min-width: 1200px) {
   #left {
     -webkit-box-flex: 6;
@@ -1011,6 +1035,7 @@ h6 {
   bottom: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  overflow: auto;
 }
 
 #wrapper #sideMenu.isOpen {
@@ -1021,11 +1046,6 @@ h6 {
 
 #wrapper #sideMenu.isOpen nav a span {
   display: inline-block;
-}
-
-#wrapper #sideMenu .logo {
-  padding: 20px;
-  color: #3f3f3f;
 }
 
 #wrapper #sideMenu nav a {
@@ -1073,6 +1093,28 @@ h6 {
   top: 2px;
 }
 
+@media (max-width: 768px) {
+  #wrapper #sideMenu {
+    width: 0;
+  }
+
+  #wrapper #sideMenu nav a {
+    display: none;
+  }
+
+  #wrapper #sideMenu.isOpen {
+    width: 100%;
+  }
+
+  #wrapper #sideMenu.isOpen nav a {
+    display: block;
+  }
+
+  #wrapper #content-area {
+    margin-left: 0px;
+  }
+}
+
 #wrapper header {
   background: #EAEDF3;
   color: #3f3f3f;
@@ -1081,20 +1123,13 @@ h6 {
   padding: 10px 15px;
 }
 
-#wrapper header ul {
-  list-style: none;
-}
-
-#wrapper header ul li {
+#wrapper header h1 {
+  font-size: 24px;
+  font-weight: 500;
   display: inline-block;
 }
 
-#wrapper header ul li h1 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-#wrapper header ul li button {
+#wrapper header button {
   float: left;
   margin: 0 15px;
   border: none;
@@ -1104,8 +1139,59 @@ h6 {
   outline: none;
 }
 
-input:focus {
-  outline: none;
-  background: #F4F6F9;
+#wrapper #content-area {
+  margin-left: 80px;
+  color: #302D43;
+}
+
+#wrapper #content-area .dateNtime {
+  float: right;
+  margin-top: -50px;
+  text-align: right;
+}
+
+#wrapper #content-area .dateNtime span {
+  display: block;
+}
+
+#wrapper #content-area .card {
+  background: #EAEDF3;
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px 15px;
+}
+
+#wrapper #content-area .card .icon-lg {
+  display: inline-block;
+}
+
+#wrapper #content-area .card .icon-lg i {
+  font-size: 50px;
+}
+
+#wrapper #content-area .card .icon-date-title {
+  display: inline-block;
+}
+
+#wrapper #content-area .card .icon-date-title i,
+#wrapper #content-area .card .icon-date-title span {
+  color: #6C7882;
+  font-size: 10px;
+}
+
+#wrapper #content-area .card .icon-count {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+#wrapper #content-area .card .icon-count span {
+  font-size: 40px;
+  color: #302D43;
+}
+
+@media (max-width: 768px) {
+  #wrapper #content-area {
+    margin-left: 0;
+  }
 }
 

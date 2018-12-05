@@ -1,0 +1,22 @@
+header {
+    background: $darkGrey;
+    color: $dark;
+    transition: all 0.5s;
+    padding: 10px 15px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    button {
+        float: left;
+        margin: 0 15px;
+        border: none;
+        border-radius: 50%;
+        background: $darkGrey;
+        color: $dark;
+        outline: none;
+    }
+}
