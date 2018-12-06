@@ -3,6 +3,8 @@
 #login {
     display: flex;
     flex-direction: row;
+    background: #ca6902;
+    color: $white;
 
     #left {
         flex: 1;
@@ -11,15 +13,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+            // Credits to www.pexels.com
+            background: url('../images/loginBG.jpeg') no-repeat center center / cover;
             height: 100vh;
             text-align: center;
 
             .showcase-text {
                 font-size: 36px;
                 width: 100%;
-                color: $dark;
+                color: $white;
                 margin-bottom: 15px;
+                text-shadow: 3px 1px $dark;
+            }
+
+            .secondary-btn {
+                color: $white;
             }
         }
     }
@@ -31,7 +39,7 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        color: $dark;
+        // color: $dark;
 
         .signin {
             display: flex;
@@ -66,10 +74,15 @@
                 width: 100%;
                 border-radius: 2px;
                 background: transparent;
-                border: 1px solid $blue;
-                color: $dark;
+                border: 1px solid $orange;
+                color: $white;
                 padding: 10px 15px;
                 line-height: 15px;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid $yellow;
+                }
             }
 
             .is-invalid {
@@ -77,11 +90,10 @@
             }
 
 
-            .primary-btn {
+            .warning-btn {
                 width: 100%;
             }
 
-            .secondary-outline-btn,
             .or,
             .links,
             .social {
@@ -94,7 +106,7 @@
                     text-decoration: none;
                     margin-bottom: 10px;
                     text-align: center;
-                    color: $dark;
+                    // color: $dark;
 
                     &:hover {
                         color: $blue;
@@ -109,6 +121,8 @@
                     display: block;
                     width: 100%;
                     margin: 5px auto;
+                    color: $white;
+                    border: 0;
                 }
             }
 
@@ -122,11 +136,11 @@
                     flex: auto;
                     border: none;
                     height: 1px;
-                    background: $dark;
+                    background: $white;
                 }
 
                 span {
-                    color: $dark;
+                    color: $white;
                     padding: 0 0.8rem;
                 }
             }
@@ -135,13 +149,13 @@
 }
 
 #main-footer {
-    color: $dark;
+    color: $white;
     text-align: center;
     font-size: 12px;
     max-width: 80%;
 
     a {
-        color: $dark;
+        color: $white;
         text-decoration: underline;
     }
 }

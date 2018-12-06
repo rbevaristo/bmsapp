@@ -636,6 +636,8 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background: #ca6902;
+  color: #ffffff;
 }
 
 #login #left {
@@ -654,6 +656,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url(/images/loginBG.jpeg?2648db104d35a96e9cd13a15e79de15a) no-repeat center center/cover;
   height: 100vh;
   text-align: center;
 }
@@ -661,8 +664,13 @@ h6 {
 #login #left #showcase .showcase-text {
   font-size: 36px;
   width: 100%;
-  color: #3f3f3f;
+  color: #ffffff;
   margin-bottom: 15px;
+  text-shadow: 3px 1px #3f3f3f;
+}
+
+#login #left #showcase .secondary-btn {
+  color: #ffffff;
 }
 
 #login #right {
@@ -683,7 +691,6 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  color: #3f3f3f;
 }
 
 #login #right .signin {
@@ -729,21 +736,25 @@ h6 {
   width: 100%;
   border-radius: 2px;
   background: transparent;
-  border: 1px solid #3490dc;
-  color: #3f3f3f;
+  border: 1px solid #f6993f;
+  color: #ffffff;
   padding: 10px 15px;
   line-height: 15px;
+}
+
+#login #right .signin .text-input:focus {
+  outline: none;
+  border: 1px solid #ffed4a;
 }
 
 #login #right .signin .is-invalid {
   border: 1px solid #e3342f;
 }
 
-#login #right .signin .primary-btn {
+#login #right .signin .warning-btn {
   width: 100%;
 }
 
-#login #right .signin .secondary-outline-btn,
 #login #right .signin .or,
 #login #right .signin .links,
 #login #right .signin .social {
@@ -755,7 +766,6 @@ h6 {
   text-decoration: none;
   margin-bottom: 10px;
   text-align: center;
-  color: #3f3f3f;
 }
 
 #login #right .signin .links a:hover {
@@ -770,6 +780,8 @@ h6 {
   display: block;
   width: 100%;
   margin: 5px auto;
+  color: #ffffff;
+  border: 0;
 }
 
 #login #right .signin .or {
@@ -792,23 +804,23 @@ h6 {
           flex: auto;
   border: none;
   height: 1px;
-  background: #3f3f3f;
+  background: #ffffff;
 }
 
 #login #right .signin .or span {
-  color: #3f3f3f;
+  color: #ffffff;
   padding: 0 0.8rem;
 }
 
 #main-footer {
-  color: #3f3f3f;
+  color: #ffffff;
   text-align: center;
   font-size: 12px;
   max-width: 80%;
 }
 
 #main-footer a {
-  color: #3f3f3f;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -867,7 +879,6 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #3f3f3f;
 }
 
 #register #left {
@@ -888,7 +899,8 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  color: #3f3f3f;
+  color: #ffffff;
+  background: #112351;
 }
 
 #register #left .signup {
@@ -944,10 +956,15 @@ h6 {
   width: 100%;
   border-radius: 2px;
   background: transparent;
-  border: 1px solid #3490dc;
-  color: #3f3f3f;
+  border: 1px solid #6574cd;
+  color: #ffffff;
   padding: 8px 15px;
   line-height: 10px;
+}
+
+#register #left .signup .text-input:focus {
+  outline: none;
+  border: 1px solid #3490dc;
 }
 
 #register #left .signup .primary-btn {
@@ -964,10 +981,6 @@ h6 {
   text-decoration: none;
   margin-bottom: 10px;
   text-align: center;
-  color: #3f3f3f;
-}
-
-#register #left .signup .links a:hover {
   color: #ffffff;
 }
 
@@ -991,11 +1004,11 @@ h6 {
           flex: auto;
   border: none;
   height: 1px;
-  background: #3f3f3f;
+  background: #ffffff;
 }
 
 #register #left .signup .or span {
-  color: #3f3f3f;
+  color: #ffffff;
   padding: 0 0.8rem;
 }
 
@@ -1015,6 +1028,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url(/images/registerBG.jpeg?6f123433cb0352ba7460c0ae0a5ab504) no-repeat center center/cover;
   height: 100vh;
   text-align: center;
 }
@@ -1022,8 +1036,9 @@ h6 {
 #register #right #showcase .showcase-text {
   font-size: 36px;
   width: 100%;
-  color: #3f3f3f;
+  color: #ffffff;
   margin-bottom: 15px;
+  text-shadow: 3px 1px #3f3f3f;
 }
 
 #wrapper #sideMenu {

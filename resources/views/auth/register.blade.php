@@ -18,7 +18,7 @@
                             </span>
                         @endif
                     </label>
-                    <input type="text" class="text-input{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ old('firstname') }}" required autofocus>
+                    <input type="text" class="text-input{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ old('firstname') }}" required autofocus autocomplete="off">
 
                 </div>
                 <div class="form-group-name form-padding">
@@ -30,7 +30,7 @@
                             </span>
                         @endif
                     </label>
-                    <input type="text" class="text-input{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required>
+                    <input type="text" class="text-input{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required autocomplete="off">
                 </div>
                 <div>
                     <label>
@@ -41,7 +41,7 @@
                             </span>
                         @endif
                     </label>
-                    <input type="text" class="text-input{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                    <input type="text" class="text-input{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autocomplete="off">
                 </div>
                 <div>
                     <label>
@@ -52,7 +52,7 @@
                             </span>
                         @endif
                     </label>
-                    <input type="text" class="text-input{{ $errors->has('username') ? ' is-invalid' : '' }}" class="form-control" name="username" value="{{ old('username') }}" required>
+                    <input type="text" class="text-input{{ $errors->has('username') ? ' is-invalid' : '' }}" class="form-control" name="username" value="{{ old('username') }}" required autocomplete="off">
                 </div>
                 <div>
                     <label>
@@ -77,7 +77,7 @@
                 <hr class="bar">
             </div>
             <div class="links">
-                <a href="{{route('login')}}" class="btn secondary-outline-btn">Sign In</a>
+                <a href="{{route('login')}}" class="btn primary-outline-btn">Sign In</a>
             </div>
         </div>
         <footer id="main-footer">
@@ -93,7 +93,7 @@
                 <h1 class="showcase-text">
                     Lorem, ipsum dolor. <strong>together</strong>
                 </h1>
-                <a href="#" class="btn secondary-outline-btn">Lorem, ipsum dolor.</a>
+                <a href="#" class="btn primary-btn">Lorem, ipsum dolor.</a>
             </div>
         </div>
     </div>

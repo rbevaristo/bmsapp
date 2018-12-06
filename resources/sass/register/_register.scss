@@ -3,7 +3,6 @@
 #register {
     display: flex;
     flex-direction: row;
-    color: $dark;
 
     #left {
         display: flex;
@@ -12,7 +11,8 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        color: $dark;
+        color: $white;
+        background: #112351;
 
         .signup {
             display: flex;
@@ -57,10 +57,15 @@
                 width: 100%;
                 border-radius: 2px;
                 background: transparent;
-                border: 1px solid $blue;
-                color: $dark;
+                border: 1px solid $indigo;
+                color: $white;
                 padding: 8px 15px;
                 line-height: 10px;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid $blue;
+                }
             }
 
             .primary-btn {
@@ -78,11 +83,7 @@
                     text-decoration: none;
                     margin-bottom: 10px;
                     text-align: center;
-                    color: $dark;
-
-                    &:hover {
-                        color: $white;
-                    }
+                    color: $white;
                 }
             }
 
@@ -96,11 +97,11 @@
                     flex: auto;
                     border: none;
                     height: 1px;
-                    background: $dark;
+                    background: $white;
                 }
 
                 span {
-                    color: $dark;
+                    color: $white;
                     padding: 0 0.8rem;
                 }
             }
@@ -114,15 +115,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+            // Credits to www.pexels.com
+            background: url('../images/registerBG.jpeg') no-repeat center center / cover;
             height: 100vh;
             text-align: center;
 
             .showcase-text {
                 font-size: 36px;
                 width: 100%;
-                color: $dark;
+                color: $white;
                 margin-bottom: 15px;
+                text-shadow: 3px 1px $dark;
             }
         }
     }
