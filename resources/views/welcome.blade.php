@@ -49,33 +49,19 @@
                     </a>
                 </nav>
             </aside>
+
             <header id="headerNav">
                 <button type="button" class="btn sm-btn" id="sideMenu--toggler">
                     <i class="fa fa-bars"></i>
                 </button>
                 <h1>BMS</h1>
-
-                {{-- <div class="row">
-                    <div class="col-md-12 col-sm-12">
-
-                        <div class="user-area">
-                            <div class="search-area">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                                <input type="text" placeholder="Search..." class="search">
-                                <span class="border"></span>
-                            </div>
-                            <a href="#" class="notification">
-                                <i class="fa fa-bell"></i>
-                                <span class="circle">3</span>
-                            </a>
-                            <a href="#">
-                                <div class="user-img"></div>
-                                <i class="fa fa-caret-down"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
+                {{-- <ul class="navbar">
+                    <li><i class="fa fa-bell"></i></li>
+                    <li></li>
+                    <li></li>
+                </ul> --}}
             </header>
+
             <main id="content-area">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
@@ -90,33 +76,29 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="col-md-5 col-sm-12">
-                        <div class="card">
-                            <div class="icon-lg">
-                                <i class="fa fa-tasks"></i>
+                    <div class="col-md-3">
+                        <div class="box">
+                            <div class="box-title">
+                                <h5>Projects</h5>
+                                <span>Monthly</span>
                             </div>
-                            <div class="icon-date-title">
-                                <i class="fa fa-calendar icon-sm"></i>
-                                <span>December</span>
-                                <h1>Projects</h1>
-                            </div>
-                            <div class="icon-count">
-                                <span>5</span>
+                            <div class="box-content">
+                                <h1>10</h1>
+                                <small>Projects</small>
+                                <span>98%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="card">
-                            <div class="icon-lg">
-                                <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <div class="icon-date-title">
-                                <i class="fa fa-calendar icon-sm"></i>
-                                <span>December</span>
-                                <h1>Sales</h1>
-                            </div>
-                            <div class="icon-count">
-                                <span>100,000</span>
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <i class="fa fa-tasks"></i>
+                                </div>
+                                <div class="col-md-8">
+                                    <span>Total Projects</span>
+                                    <h2>300</h2>
+                                </div>
                             </div>
                         </div>
                     </div>

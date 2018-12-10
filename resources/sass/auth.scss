@@ -32,37 +32,94 @@
             }
         }
 
-        .card {
-            background: $darkGrey;
-            width: 100%;
-            border-radius: 2px;
-            padding: 10px 15px;
+        // .card {
+        //     background: $darkGrey;
+        //     width: 100%;
+        //     border-radius: 2px;
+        //     padding: 10px 15px;
 
-            .icon-lg {
-                display: inline-block;
+        //     .icon-lg {
+        //         display: inline-block;
 
-                i {
-                    font-size: 50px;
+        //         i {
+        //             font-size: 50px;
+        //         }
+        //     }
+
+        //     .icon-date-title {
+        //         display: inline-block;
+
+        //         i,
+        //         span {
+        //             color: $darkGreyFont;
+        //             font-size: 10px;
+        //         }
+        //     }
+
+        //     .icon-count {
+        //         display: inline-block;
+        //         padding: 0 15px;
+
+        //         span {
+        //             font-size: 40px;
+        //             color: $purpleLight;
+        //         }
+        //     }
+        // }
+        .box {
+            clear: both;
+            margin-bottom: 250px;
+            margin-top: 0;
+            padding: 0;
+
+            .box-title {
+                background-color: #ffffff;
+                border-color: #e7eaec;
+                border-image: none;
+                border-style: solid solid none;
+                border-width: 2px 0 0;
+                color: inherit;
+                margin-bottom: 0;
+                padding: 15px 90px 8px 15px;
+                min-height: 48px;
+                position: relative;
+                clear: both;
+
+                h5 {
+                    display: inline-block;
+                    font-size: 14px;
+                    margin: 0 0 7px;
+                    padding: 0;
+                    text-overflow: ellipsis;
+                    float: none;
+                }
+
+                span {
+                    float: right;
+                    font-size: 10px;
+                    margin-right: -75px;
                 }
             }
 
-            .icon-date-title {
-                display: inline-block;
+            .box-content {
+                background-color: #ffffff;
+                color: inherit;
+                padding: 15px 20px 20px 20px;
+                border-color: #e7eaec;
+                border-image: none;
+                border-style: solid solid none;
+                border-width: 1px 0;
 
-                i,
-                span {
-                    color: $darkGreyFont;
+                h1 {
+                    margin-top: 5px;
+                }
+
+                small {
                     font-size: 10px;
                 }
-            }
-
-            .icon-count {
-                display: inline-block;
-                padding: 0 15px;
 
                 span {
-                    font-size: 40px;
-                    color: $purpleLight;
+                    float: right;
                 }
             }
         }
