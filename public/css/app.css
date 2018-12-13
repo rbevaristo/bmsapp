@@ -10477,6 +10477,96 @@ body {
   background: #EAEDF3;
 }
 
+.bg-four {
+  background: rgba(125, 188, 196, 0.8);
+  color: #ffffff;
+}
+
+.bg-four:hover {
+  background: #7dbcc4;
+}
+
+.bg-three {
+  background: rgba(108, 14, 35, 0.8);
+  color: #ffffff;
+}
+
+.bg-three:hover {
+  background: #6C0E23;
+}
+
+.bg-two {
+  background: rgba(71, 104, 44, 0.8);
+  color: #ffffff;
+}
+
+.bg-two:hover {
+  background: #47682C;
+}
+
+.bg-one {
+  background: rgba(48, 45, 67, 0.8);
+  color: #ffffff;
+}
+
+.bg-one:hover {
+  background: #302D43;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #282639;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #282639;
+}
+
+.widget {
+  border-radius: 5px;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.widget .fa {
+  font-size: 60px;
+}
+
+.widget span,
+.widget h2 {
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+
+.widget span {
+  font-weight: 500;
+}
+
 #wrapper {
   height: 100%;
   overflow: auto;
@@ -10484,6 +10574,9 @@ body {
 
 #wrapper .navbar-light {
   background: #282639;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 #wrapper .btn--toggler {
@@ -10663,6 +10756,7 @@ body {
 
 #wrapper #content-area {
   margin-left: 80px;
+  margin-top: 50px;
 }
 
 #wrapper #content-area .dateNtime {
@@ -10681,5 +10775,93 @@ body {
 
 #wrapper #content-area .breadcrumb-item.active {
   color: #282639;
+}
+
+#wrapper #content-area .faces {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+#wrapper #content-area .card {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+}
+
+#wrapper #content-area .card .card-header h5 {
+  display: inline-block;
+}
+
+#wrapper #content-area #dashboard #due-projects .project-date {
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#wrapper #content-area #dashboard #due-projects .project-date small {
+  display: block;
+  font-size: 14px;
+}
+
+#wrapper #content-area #dashboard #due-projects .project-date span {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#wrapper #content-area #dashboard #due-projects .project-title a {
+  color: #302D43;
+  text-decoration: none;
+}
+
+#wrapper #content-area #dashboard #due-projects .project-title a:hover {
+  color: #282639;
+}
+
+#wrapper #content-area #dashboard #due-projects .project-info span {
+  display: inline-block;
+  font-size: 12px;
+}
+
+#wrapper #content-area #dashboard #recent-projects .project-date {
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#wrapper #content-area #dashboard #recent-projects .project-date small {
+  display: block;
+  font-size: 12px;
+}
+
+#wrapper #content-area #dashboard #recent-projects .project-date span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#wrapper #content-area #dashboard #recent-projects .project-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#wrapper #content-area #dashboard #recent-projects .project-info span {
+  display: inline-block;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  #wrapper #content-area .project-info {
+    margin-top: 10px;
+  }
+
+  #wrapper #content-area .project-assignee {
+    text-align: center;
+  }
+
+  #wrapper #content-area .project-assignee img {
+    display: inline-block;
+  }
 }
 

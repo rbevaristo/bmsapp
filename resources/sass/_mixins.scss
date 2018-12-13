@@ -1,5 +1,6 @@
 @mixin hover-button($color) {
     background: rgba($color, 0.8);
+    color: $white;
 
     &:hover {
         background: $color;

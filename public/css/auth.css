@@ -302,6 +302,7 @@ h6 {
 
 .primary-btn {
   background: rgba(52, 144, 220, 0.8);
+  color: #ffffff;
 }
 
 .primary-btn:hover {
@@ -310,6 +311,7 @@ h6 {
 
 .danger-btn {
   background: rgba(227, 52, 47, 0.8);
+  color: #ffffff;
 }
 
 .danger-btn:hover {
@@ -318,6 +320,7 @@ h6 {
 
 .warning-btn {
   background: rgba(246, 153, 63, 0.8);
+  color: #ffffff;
 }
 
 .warning-btn:hover {
@@ -326,6 +329,7 @@ h6 {
 
 .success-btn {
   background: rgba(56, 193, 114, 0.8);
+  color: #ffffff;
 }
 
 .success-btn:hover {
@@ -334,6 +338,7 @@ h6 {
 
 .info-btn {
   background: rgba(77, 192, 181, 0.8);
+  color: #ffffff;
 }
 
 .info-btn:hover {
@@ -342,6 +347,7 @@ h6 {
 
 .secondary-btn {
   background: rgba(63, 63, 63, 0.8);
+  color: #ffffff;
 }
 
 .secondary-btn:hover {

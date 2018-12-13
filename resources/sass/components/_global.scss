@@ -7,3 +7,23 @@
 body {
     background: $darkGreyBG;
 }
+
+.bg-four {
+    @include hover-button($four);
+}
+
+.bg-three {
+    @include hover-button($three);
+}
+
+.bg-two {
+    @include hover-button($two);
+}
+
+.bg-one {
+    @include hover-button($one);
+}
+
+.row {
+    margin-bottom: 10px;
+}
