@@ -3,7 +3,7 @@
 #login {
     display: flex;
     flex-direction: row;
-    background: #ca6902;
+    background: #112351;
     color: $white;
 
     #left {
@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             // Credits to www.pexels.com
-            background: url('../images/loginBG.jpeg') no-repeat center center / cover;
+            background: url('../images/registerBG.jpeg') no-repeat center center / cover;
             height: 100vh;
             text-align: center;
 
@@ -24,10 +24,6 @@
                 color: $white;
                 margin-bottom: 15px;
                 text-shadow: 3px 1px $dark;
-            }
-
-            .secondary-btn {
-                color: $white;
             }
         }
     }
@@ -74,14 +70,14 @@
                 width: 100%;
                 border-radius: 2px;
                 background: transparent;
-                border: 1px solid $orange;
+                border: 1px solid $purpleDark;
                 color: $white;
                 padding: 10px 15px;
                 line-height: 15px;
 
                 &:focus {
                     outline: none;
-                    border: 1px solid $yellow;
+                    border: 1px solid $blue;
                 }
             }
 
@@ -90,7 +86,7 @@
             }
 
 
-            .warning-btn {
+            .primary-btn {
                 width: 100%;
             }
 

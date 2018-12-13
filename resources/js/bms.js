@@ -3,7 +3,7 @@ let sideMenuToggler = document.getElementById('sideMenu--toggler');
 sideMenuToggler.addEventListener('click', toggleSideMenu);
 
 function toggleSideMenu() {
-    let aside = document.getElementById('sideMenu');
+    let aside = document.getElementById('wrapper');
     (aside.classList.contains('isOpen')) ?
     aside.classList.remove('isOpen'):
         aside.classList.add('isOpen');
@@ -16,8 +16,7 @@ function startTime() {
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('realTime').innerHTML =
-        h + ":" + m + ":" + s;
+    document.getElementById('realTime').innerHTML = h + ":" + m + ":" + s;
     var t = setTimeout(startTime, 500);
 }
 

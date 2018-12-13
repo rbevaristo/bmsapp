@@ -8,7 +8,7 @@
                 <h1 class="showcase-text">
                     Lorem, ipsum dolor. <strong>together</strong>
                 </h1>
-                <a href="#" class="btn secondary-btn">Lorem, ipsum dolor.</a>
+                <a href="#" class="btn primary-btn">Lorem, ipsum dolor.</a>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
                         {{ __('Remember Me') }}
                     </label>
                 </div>
-                <button type="submit" class="btn warning-btn">Sign In</button>
+                <button type="submit" class="btn primary-btn">Sign In</button>
             </form>
             <div class="links">
                 @if (Route::has('password.request'))
@@ -61,7 +61,7 @@
             <div class="social">
                 {{-- <a href="#" class="btn primary-outline-btn">Sign in with <strong>Facebook</strong> <i class="fa fa-facebook-square"></i></a> --}}
                 {{-- <a href="#" class="btn danger-outline-btn">Sign in with <strong>Google</strong> <i class="fa fa-google-plus-square"></i></a> --}}
-                <a href="{{ route('register') }}" class="btn warning-outline-btn">Create an account</a>
+                <a href="{{ route('register') }}" class="btn primary-outline-btn">Create an account</a>
             </div>
         </div>
         <footer id="main-footer">

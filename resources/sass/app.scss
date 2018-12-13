@@ -6,3 +6,40 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Global
+@import 'components/global';
+
+
+#wrapper {
+    height: 100%;
+    overflow: auto;
+
+    // Navbar
+    @import 'components/navbar';
+
+    // Sidebar
+    @import 'components/sidebar';
+
+    #content-area {
+        margin-left: 80px;
+
+        .dateNtime {
+            margin-top: -100px;
+            float: right;
+            text-align: right;
+
+            span {
+                display: block;
+            }
+        }
+
+        .breadcrumb-item {
+            color: rgba($purpleDark, 0.5);
+
+            &.active {
+                color: $purpleDark;
+            }
+        }
+    }
+}

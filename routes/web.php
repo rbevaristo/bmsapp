@@ -22,3 +22,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::resource('Projects', 'ProjectsController');
+    Route::resource('Sales', 'SalesController');
+    Route::resource('Reports', 'ReportsController');
+    Route::resource('Employees', 'EmployeesController');
+    Route::resource('Payroll', 'PayrollController');
+    Route::resource('Settings', 'SettingsController');
+});
