@@ -15,25 +15,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
 
+    
+    <link rel="stylesheet" href="{{ asset('./vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('./vendor/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('./dist/css/sb-admin-2.css') }}">
+    @yield('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <div id="wrapper">
             @include('inc.navbar')
-            @include('inc.sidebar')
-            
-            <main class="py-4" id="content-area">
+            <main class="py-4" id="page-wrapper">
                 @yield('content')
             </main>
         </div>
     </div>
 
-
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    {{-- <script src="{{ asset('js/bms.js') }}"></script> --}}
-    
-    
+    <script src="{{ asset('./vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('./vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('./vendor/metisMenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('./dist/js/sb-admin-2.min.js') }}"></script>
+    @yield('js')
 </body>
 </html>

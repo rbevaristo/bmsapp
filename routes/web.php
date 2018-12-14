@@ -31,4 +31,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('Employees', 'EmployeesController');
     Route::resource('Payroll', 'PayrollController');
     Route::resource('Settings', 'SettingsController');
+    Route::resource('Roles', 'RoleController');
+    Route::resource('Permissions', 'PermissionController');
+    Route::resource('Users', 'UserController');
 });
