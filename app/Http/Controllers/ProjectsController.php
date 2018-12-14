@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['role:Admin|Project Manager', 'permission:view projects']);
+    }
     /**
      * Display a listing of the resource.
      *
