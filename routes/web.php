@@ -25,13 +25,13 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 
 Route::group(['middleware' => 'auth'], function(){
-    Route::resource('Projects', 'ProjectsController');
-    Route::resource('Sales', 'SalesController');
-    Route::resource('Reports', 'ReportsController');
-    Route::resource('Employees', 'EmployeesController');
-    Route::resource('Payroll', 'PayrollController');
-    Route::resource('Settings', 'SettingsController');
-    Route::resource('Roles', 'RoleController');
-    Route::resource('Permissions', 'PermissionController');
-    Route::resource('Users', 'UserController');
+    Route::resource('projects', 'ProjectsController');
+    Route::resource('sales', 'SalesController');
+    Route::resource('reports', 'ReportsController');
+    Route::resource('employees', 'EmployeesController');
+    Route::resource('payroll', 'PayrollController');
+    Route::resource('settings', 'SettingsController');
+    Route::resource('roles', 'RoleController');
+    Route::resource('permissions', 'PermissionController');
+    Route::resource('users', 'UserController');
 });

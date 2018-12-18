@@ -8,27 +8,27 @@
                 <a href="#"><i class="fa fa-wrench fa-fw"></i>Roles & Permissions <i class="fa arrow"></i></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ route('Roles.index') }}"><i class="fa fa-wrench fa-fw"></i> Roles</a>
+                        <a href="{{ route('roles.index') }}"><i class="fa fa-wrench fa-fw"></i> Roles</a>
                     </li>
                     <li>
-                        <a href="{{ route('Permissions.index') }}"><i class="fa fa-wrench fa-fw"></i> Permissions</a>
+                        <a href="{{ route('permissions.index') }}"><i class="fa fa-wrench fa-fw"></i> Permissions</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="{{ route('Users.index') }}"><i class="fa fa-user fa-fw"></i> Users</a>
+                <a href="{{ route('users.index') }}"><i class="fa fa-user fa-fw"></i> Users</a>
             </li>
             <li>
-                <a href="{{ route('Projects.index') }}"><i class="fa fa-tasks fa-fw"></i> Projects</a>
+                <a href="{{ route('projects.index') }}"><i class="fa fa-tasks fa-fw"></i> Projects</a>
             </li>
             <li>
-                <a href="{{ route('Sales.index') }}"><i class="fa fa-shopping-cart fa-fw"></i> Sales</a>
+                <a href="{{ route('sales.index') }}"><i class="fa fa-shopping-cart fa-fw"></i> Sales</a>
             </li>
             <li>
-                <a href="{{ route('Payroll.index') }}"><i class="fa fa-money fa-fw"></i> Payroll</a>
+                <a href="{{ route('payroll.index') }}"><i class="fa fa-money fa-fw"></i> Payroll</a>
             </li>
             <li>
-                <a href="{{ route('Employees.index') }}"><i class="fa fa-users fa-fw"></i> Employees</a>
+                <a href="{{ route('employees.index') }}"><i class="fa fa-users fa-fw"></i> Employees</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-file fa-fw"></i> Reports<span class="fa arrow"></span></a>
@@ -51,7 +51,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ route('Settings.index') }}"><i class="fa fa-cogs fa-fw"></i> Settings</a>
+                <a href="{{ route('settings.index') }}"><i class="fa fa-cogs fa-fw"></i> Settings</a>
             </li>
         </ul>
     </div>

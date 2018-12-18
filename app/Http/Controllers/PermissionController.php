@@ -54,7 +54,7 @@ class PermissionController extends Controller
                 $roles_r->givePermissionTo($permission);
             }
         }
-        return redirect()->route('Permissions.index')->with('success', 'Success');
+        return redirect()->route('permissions.index')->with('success', 'Success');
     }
 
     /**
@@ -65,7 +65,7 @@ class PermissionController extends Controller
      */
     public function show($id)
     {
-        return redirect('Permissions');
+        return redirect('permissions');
     }
 
     /**
@@ -91,7 +91,7 @@ class PermissionController extends Controller
     {
         $permission = Permission::findOrFail($id);
         $permission->fill($request->all())->save();
-        return redirect()->route('Permissions.index')->with('success', 'Success');
+        return redirect()->route('permissions.index')->with('success', 'Success');
     }
 
     /**
@@ -104,12 +104,12 @@ class PermissionController extends Controller
     {
         $permission = Permission::findOrFail($id);
         if ($permission->name == "Administer roles & permissions") {
-            return redirect()->route('Permissions.index')
+            return redirect()->route('permissions.index')
             ->with('success',
              'Cannot delete this Permission!');
         }
         $permission->delete();
-        return redirect()->route('Permissions.index')
+        return redirect()->route('permissions.index')
             ->with('success',
              'Permission deleted!');
     }

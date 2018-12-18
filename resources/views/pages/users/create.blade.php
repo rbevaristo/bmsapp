@@ -12,7 +12,7 @@
         <h1><i class='fa fa-user-plus'></i> Add User</h1>
         <hr>
     
-        {{ Form::open(array('url' => 'Users')) }}
+        {{ Form::open(array('url' => 'users')) }}
     
         <div class="form-group">
             {{ Form::label('firstname', 'FirstName') }}

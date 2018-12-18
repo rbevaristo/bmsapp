@@ -12,7 +12,7 @@
         <h1><i class='fa fa-user-plus'></i> Edit {{$user->firstname}} {{ $user->lastname }}</h1>
         <hr>
     
-        {{ Form::model($user, array('route' => array('Users.update', $user->id), 'method' => 'PUT')) }}
+        {{ Form::model($user, array('route' => array('users.update', $user->id), 'method' => 'PUT')) }}
 
         <div class="form-group">
             {{ Form::label('firstName', 'FirstName') }}

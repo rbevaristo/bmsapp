@@ -1,17 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            {{-- <h2>Employees</h2> --}}
-            {{-- <nav class="breadcrumb">
-                <a class="breadcrumb-item" href="{{ route('dashboard') }}">Dashboard</a>
-                <span class="breadcrumb-item active">Employees</span>
-            </nav> --}}
-            @include('inc.breadcrumbs')
-            <div class="dateNtime">
-                <span>{{ date('F d, Y') }}</span> <span id="realTime"> </span>
+<div class="row">
+    <div class="col-md-9 col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                List of Employees
+            </div>
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                
+            </div>
+            <div class="panel-body">
+                
             </div>
         </div>
     </div>

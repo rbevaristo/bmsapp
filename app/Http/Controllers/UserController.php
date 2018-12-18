@@ -59,8 +59,8 @@ class UserController extends Controller
             }
             $user->save();
         }
-        return ($user) ? redirect()->route('Users.index')->with('success', 'Success') : 
-                        redirect()->route('Users.index')->with('error', 'Error');
+        return ($user) ? redirect()->route('users.index')->with('success', 'Success') : 
+                        redirect()->route('users.index')->with('error', 'Error');
     }
 
     /**
@@ -71,7 +71,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return redirect('Users');
+        return redirect('users');
     }
 
     /**
@@ -109,8 +109,8 @@ class UserController extends Controller
             $user->roles()->detach();
         }
         $user->save();
-        return ($user) ? redirect()->route('Users.index')->with('success', 'Success') : 
-                        redirect()->route('Users.index')->with('error', 'Error');
+        return ($user) ? redirect()->route('users.index')->with('success', 'Success') : 
+                        redirect()->route('users.index')->with('error', 'Error');
     }
 
     /**
