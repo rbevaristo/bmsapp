@@ -13,9 +13,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Styles -->
 
-    
+    <!-- Styles -->   
     <link rel="stylesheet" href="{{ asset('./vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('./vendor/metisMenu/metisMenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('./dist/css/sb-admin-2.css') }}">

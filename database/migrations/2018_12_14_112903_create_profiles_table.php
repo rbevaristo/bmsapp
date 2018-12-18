@@ -15,6 +15,9 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('birthdate');
+            $table->boolean('gender')->nullable();
+            $table->string('contact')->nullable();
             $table->timestamps();
         });
     }
