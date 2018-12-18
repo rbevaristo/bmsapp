@@ -55,6 +55,14 @@
   color: #92CF48;
 }
 
+.navbar-default .navbar-top-links li.dropdown .dropdown-toggle:focus {
+  background: #EAEDF3;
+}
+
+.navbar-default .navbar-top-links li.dropdown .dropdown-toggle:focus i {
+  color: #92CF48;
+}
+
 .navbar-default.sidebar {
   position: fixed;
   height: 100%;
@@ -70,13 +78,9 @@
   border: none;
 }
 
-.navbar-default.sidebar ul li a.active {
-  border-left: 5px solid #92CF48;
-  background: #EAEDF3;
-  color: #92CF48;
-}
-
-.navbar-default.sidebar ul li a:hover {
+.navbar-default.sidebar ul li a.active,
+.navbar-default.sidebar ul li a:hover,
+.navbar-default.sidebar ul li a:focus {
   border-left: 5px solid #92CF48;
   background: #EAEDF3;
   color: #92CF48;

@@ -55,6 +55,14 @@
                             color: $neonGreen;
                         }
                     }
+
+                    &:focus {
+                        background: $darkGreyBG;
+
+                        i {
+                            color: $neonGreen;
+                        }
+                    }
                 }
             }
         }
@@ -76,13 +84,9 @@
                 a {
 
 
-                    &.active {
-                        border-left: 5px solid $neonGreen;
-                        background: $darkGreyBG;
-                        color: $neonGreen;
-                    }
-
-                    &:hover {
+                    &.active,
+                    &:hover,
+                    &:focus {
                         border-left: 5px solid $neonGreen;
                         background: $darkGreyBG;
                         color: $neonGreen;

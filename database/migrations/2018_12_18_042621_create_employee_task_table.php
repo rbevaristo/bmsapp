@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectTaskTable extends Migration
+class CreateEmployeeTaskTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateProjectTaskTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_task', function (Blueprint $table) {
-            $table->integer('project_id');
+        Schema::create('employee_task', function (Blueprint $table) {
+            $table->integer('employee_id');
             $table->integer('task_id');
-            $table->primary(['project_id', 'task_id']);
+            $table->primary(['employee_id','task_id']);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateProjectTaskTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project_task');
+        Schema::dropIfExists('employee_task');
     }
 }

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['role:Admin|Manage Employees']);
+    }
     /**
      * Display a listing of the resource.
      *

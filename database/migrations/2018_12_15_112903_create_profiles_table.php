@@ -18,6 +18,8 @@ class CreateProfilesTable extends Migration
             $table->date('birthdate');
             $table->boolean('gender')->nullable();
             $table->string('contact')->nullable();
+            $table->integer('employee_id')->unsigned();
+            $table->foreign('employee_id')->references('id')->on('employees')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

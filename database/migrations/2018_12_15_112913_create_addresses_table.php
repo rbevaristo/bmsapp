@@ -20,6 +20,10 @@ class CreateAddressesTable extends Migration
             $table->string('barangay');
             $table->string('city');
             $table->integer('postalCode');
+            $table->integer('profile_id')->unsigned();
+            $table->foreign('profile_id')->references('id')->on('profiles')->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('client_id')->unsigned();
+            $table->foreign('client_id')->references('id')->on('clients')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

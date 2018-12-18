@@ -34,4 +34,15 @@ class User extends Authenticatable
     {
         return $this->firstname .' '. $this->lastname;
     }
+    
+
+    public function getFirstnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    public function getLastnameAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }
