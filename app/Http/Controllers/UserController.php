@@ -48,7 +48,6 @@ class UserController extends Controller
         $user->lastname = $request->lastname;
         $user->username = $request->username;
         $user->email = $request->email;
-        if(!empty($request->password))
         $user->password = Hash::make($request->password);
         
         $roles = $request->roles;
@@ -101,6 +100,7 @@ class UserController extends Controller
         $user->lastname = $request->lastname;
         $user->username = $request->username;
         $user->email = $request->email;
+        if(!empty($request->password))
         $user->password = Hash::make($request->password);
         $roles = $request->roles;
         if(isset($roles)){

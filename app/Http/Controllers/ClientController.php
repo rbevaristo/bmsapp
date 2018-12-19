@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
+use App\Address;
 use Illuminate\Http\Request;
+use App\Http\Requests\ClientRequest;
 
-class ProjectsController extends Controller
+class ClientController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['role:Admin|Manage Projects']);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +16,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('pages.projects.index');
+        return view('pages.clients.index');
     }
 
     /**
@@ -27,7 +26,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('pages.projects.create');
+        return view('pages.clients.create');
     }
 
     /**
@@ -36,9 +35,31 @@ class ProjectsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientRequest $request)
     {
-        //
+        $client = new Client;
+        $client->name = $request->name;
+        $client->contact = $request->contact;
+        $client->email = $request->email;
+        $client->user_id = auth()->user()->id;
+        $client->save();
+
+        if ($client) {
+            $address = new Address;
+            $address->houseNumber = $request->houseNumber;
+            $address->street = $request->street;
+            $address->barangay = $request->barangay;
+            $address->city = $request->city;
+            $address->state = $request->state;
+            $address->postalCode = $request->postalCode;
+            $address->client_id = $client->id;
+            $address->save();
+
+            if($address){
+                return redirect('clients')->with('success', 'Client Added');
+            }
+        }
+        return redirect()->back()->with('error', 'Error processing request.');
     }
 
     /**

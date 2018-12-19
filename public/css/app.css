@@ -96,3 +96,8 @@
   }
 }
 
+.optional {
+  color: rgba(40, 38, 57, 0.5);
+  font-size: 12px;
+}
+

@@ -6,5 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    //
+    protected $fillable = [
+        'name', 'email', 'contact', 'logo'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function address()
+    {
+        return $this->hasOne(Address::class, 'client_id');
+    }
 }

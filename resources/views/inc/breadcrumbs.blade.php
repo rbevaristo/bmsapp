@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">{{ ucfirst(Request::path()) }}</h1>
+        <h1 class="page-header">{{ ucfirst(request()->segment(1)) }}</h1>
         @if(Request::path() != 'dashboard')
         <ul class="breadcrumb">
             <li><a class="breadcrumb-item" href="/dashboard">Dashboard</a></li>

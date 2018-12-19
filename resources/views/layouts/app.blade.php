@@ -27,6 +27,7 @@
             @include('inc.navbar')
             <main class="py-4" id="page-wrapper">
                 @include('inc.breadcrumbs')
+                @include('inc.errors')
                 @yield('content')
             </main>
         </div>
