@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="houseNumber">House Number / Apartment Number / Building Number</label>
+                                <label for="houseNumber">House / Apartment / Building Number</label>
                                 <input type="text" name="houseNumber" id="houseNumber" class="form-control" value="{{ old('houseNumber') }}">
                             </div>
                         </div>
