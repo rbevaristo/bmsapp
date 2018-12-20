@@ -12,7 +12,7 @@
         <h1><i class='fa fa-key'></i> Add Permission</h1>
         <br>
     
-        {{ Form::open(array('url' => 'Permissions')) }}
+        {{ Form::open(array('url' => 'permissions')) }}
     
         <div class="form-group">
             {{ Form::label('name', 'Name') }}

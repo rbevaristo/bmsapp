@@ -2,60 +2,70 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Users</h1>
-    </div>
-</div>
-<div class="row">
-    <div class='col-lg-4 col-lg-offset-4'>
+    <div class='col-lg-12'>
 
         <h1><i class='fa fa-user-plus'></i> Add User</h1>
         <hr>
-    
-        {{ Form::open(array('url' => 'users')) }}
-    
-        <div class="form-group">
-            {{ Form::label('firstname', 'FirstName') }}
-            {{ Form::text('firstname', '', array('class' => 'form-control', 'required' => 'required')) }}
-        </div>
+        
+        <div class="row">
+            <form action="{{ route('users.store') }}" method="POST">
+                @csrf
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" required value="{{ old('firstname') }}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control" required value="{{ old('lastname') }}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="form-control" required value="{{ old('username') }}">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required value="{{ old('email') }}">
+                </div>
 
-        <div class="form-group">
-            {{ Form::label('lastname', 'LastName') }}
-            {{ Form::text('lastname', '', array('class' => 'form-control', 'required' => 'required')) }}
-        </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
+                </div>
 
-        <div class="form-group">
-            {{ Form::label('username', 'UserName') }}
-            {{ Form::text('username', '', array('class' => 'form-control', 'required' => 'required')) }}
+            </div>
+            <div class="col-md-6">
+                <div class='form-group'>
+                    <h2>Roles</h2>
+                    @foreach ($roles as $role)
+                        <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" name="roles[]" value="{{ $role->id }}">
+                              {{ ucfirst($role->name) }}
+                            </label>
+                        </div>
+
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>           
+            </form>
         </div>
+        
+
+
     
-        <div class="form-group">
-            {{ Form::label('email', 'Email') }}
-            {{ Form::email('email', '', array('class' => 'form-control', 'required' => 'required')) }}
-        </div>
-    
-        <div class='form-group'>
-            @foreach ($roles as $role)
-                {{ Form::checkbox('roles[]',  $role->id ) }}
-                {{ Form::label($role->name, ucfirst($role->name)) }}<br>
-            @endforeach
-        </div>
-    
-        <div class="form-group">
-            {{ Form::label('password', 'Password') }}<br>
-            {{ Form::password('password', array('class' => 'form-control', 'required' => 'required')) }}
-    
-        </div>
-    
-        <div class="form-group">
-            {{ Form::label('password', 'Confirm Password') }}<br>
-            {{ Form::password('password_confirmation', array('class' => 'form-control', 'required' => 'required')) }}
-    
-        </div>
-    
-        {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
-    
-        {{ Form::close() }}
+        
     
     </div>  
 </div>

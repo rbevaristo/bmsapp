@@ -1,7 +1,8 @@
 <?php
-
+namespace App\Http\Classes;
 namespace App\Http\Controllers\Auth;
 
+use Slug;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -68,6 +69,7 @@ class RegisterController extends Controller
         return User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
+            'slug' => str_slug($data['firstname'] .' '. $data['lastname']),
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

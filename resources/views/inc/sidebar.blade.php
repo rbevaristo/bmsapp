@@ -8,15 +8,15 @@
                 <a href="#" {!! (request()->segment(1) == 'roles' || request()->segment(1) == 'permissions')  ? 'class="active"' : '' !!}><i class="fa fa-wrench fa-fw"></i>Roles & Permissions <i class="fa arrow"></i></a>
                 <ul class="nav nav-second-level">
                     <li>
+                        <a href="{{ route('users.index') }}" {!! (request()->segment(1) == 'users') ? 'class="active"' : '' !!}><i class="fa fa-user fa-fw"></i> Users</a>
+                    </li>
+                    <li>
                         <a href="{{ route('roles.index') }}" {!! (request()->segment(1) == 'roles') ? 'class="active"' : '' !!}><i class="fa fa-wrench fa-fw"></i> Roles</a>
                     </li>
                     <li>
-                        <a href="{{ route('permissions.index') }}" {!! (request()->segment(1) == 'permissions') ? 'class="active"' : '' !!}><i class="fa fa-wrench fa-fw"></i> Permissions</a>
+                        <a href="{{ route('permissions.index') }}" {!! (request()->segment(1) == 'permissions') ? 'class="active"' : '' !!}><i class="fa fa-lock fa-fw"></i> Permissions</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="{{ route('users.index') }}" {!! (request()->segment(1) == 'users') ? 'class="active"' : '' !!}><i class="fa fa-user fa-fw"></i> Users</a>
             </li>
             <li>
                 <a href="{{ route('clients.index') }}" {!! (request()->segment(1) == 'clients') ? 'class="active"' : '' !!}><i class="fa fa-user-circle fa-fw"></i> Clients</a>

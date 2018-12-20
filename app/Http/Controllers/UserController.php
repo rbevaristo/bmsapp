@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Toastr;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 
@@ -41,11 +43,12 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $user = new User;
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
+        $user->slug = str_slug($request->firstname . ' ' . $request->lastname);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
@@ -79,9 +82,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $user = User::findOrFail($id);
+        $user = User::where('slug', $slug)->first();
         $roles = Role::get();
         return view('pages.users.edit', compact('user', 'roles'));
     }
@@ -98,6 +101,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
+        $user->slug = \Slug::make(array($request->firstname,$request->lastname));
         $user->username = $request->username;
         $user->email = $request->email;
         if(!empty($request->password))

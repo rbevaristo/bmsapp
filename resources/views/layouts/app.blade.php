@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('./vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('./vendor/metisMenu/metisMenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('./dist/css/sb-admin-2.css') }}">
+    <link rel="stylesheet" href="{{ asset('./vendor/toastr/toastr.min.css') }}">
     @yield('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -38,6 +39,8 @@
     <script src="{{ asset('./vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('./vendor/metisMenu/metisMenu.min.js') }}"></script>
     <script src="{{ asset('./dist/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('./vendor/toastr/toastr.min.js') }}"></script>
+    {!! Toastr::message() !!}
     @yield('js')
 </body>
 </html>

@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'email', 'username', 'password',
+        'firstname', 'lastname', 'slug', 'email', 'username', 'password',
     ];
 
     /**
@@ -45,4 +45,5 @@ class User extends Authenticatable
     {
         return ucfirst($value);
     }
+
 }

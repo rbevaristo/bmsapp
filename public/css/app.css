@@ -157,3 +157,15 @@
   background-color: #1a1a1a;
 }
 
+#users-list button {
+  border: none;
+  cursor: text;
+  background: transparent;
+}
+
+#users-list button:focus,
+#users-list button:active {
+  outline: none;
+  background: transparent;
+}
+

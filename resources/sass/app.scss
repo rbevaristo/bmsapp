@@ -173,3 +173,16 @@
 .badge-inverse:hover {
     background-color: #1a1a1a;
 }
+
+#users-list {
+    button {
+        border: none;
+        cursor: text;
+        background: transparent;
+        
+        &:focus, &:active {
+            outline:none;
+            background: transparent;
+        }
+    }
+}

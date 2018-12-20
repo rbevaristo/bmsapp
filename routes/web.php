@@ -36,3 +36,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('users', 'UserController');
     Route::resource('clients', 'ClientController');
 });
+
+// Customizing Routes
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('users/edit/{slug}', 'UserController@edit')->name('user.edit');
+});
