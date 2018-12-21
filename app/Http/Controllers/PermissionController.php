@@ -54,7 +54,7 @@ class PermissionController extends Controller
                 $roles_r->givePermissionTo($permission);
             }
         }
-        return redirect()->route('permissions.index')->with('success', 'Success');
+        return redirect()->route('permissions.index')->with('success', 'Permission created!');
     }
 
     /**
@@ -91,7 +91,7 @@ class PermissionController extends Controller
     {
         $permission = Permission::findOrFail($id);
         $permission->fill($request->all())->save();
-        return redirect()->route('permissions.index')->with('success', 'Success');
+        return redirect()->route('permissions.index')->with('success', 'Permission updated!');
     }
 
     /**

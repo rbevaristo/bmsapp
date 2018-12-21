@@ -2,36 +2,32 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Permissions</h1>
-    </div>
-</div>
-<div class="row">
-    <div class='col-lg-4 col-lg-offset-4'>
-
-        <h1><i class='fa fa-key'></i> Add Permission</h1>
-        <br>
-    
-        {{ Form::open(array('url' => 'permissions')) }}
-    
-        <div class="form-group">
-            {{ Form::label('name', 'Name') }}
-            {{ Form::text('name', '', array('class' => 'form-control')) }}
-        </div><br>
-        @if(!$roles->isEmpty()) //If no roles exist yet
-            <h4>Assign Permission to Roles</h4>
-    
-            @foreach ($roles as $role) 
-                {{ Form::checkbox('roles[]',  $role->id ) }}
-                {{ Form::label($role->name, ucfirst($role->name)) }}<br>
-    
-            @endforeach
-        @endif
-        <br>
-        {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
-    
-        {{ Form::close() }}
-    
+    <div class='col-lg-6 col-lg-offset-3'>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2><i class='fa fa-key'></i> Add Permission</h2>
+            </div>
+            <div class="panel-body">
+                <form action="{{ route('permissions.store') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="roles">Role <span class="optional">(optional)</span></label>
+                        <select class="selectpicker form-control" multiple data-actions-box="true" name="roles[]" id="roles">
+                            @foreach($roles as $role)
+                                <option data-content="<span class='badge badge-success'>{{ $role->name }}</span>" value="{{ $role->id }}">{{ ucfirst($role->name) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
+
+@include('inc.bootstrap-select')

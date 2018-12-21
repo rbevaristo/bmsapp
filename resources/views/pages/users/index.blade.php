@@ -13,7 +13,7 @@
                 <span class="hidden-xs">Roles</span>
             </a>
             <a href="{{ route('permissions.index') }}" class="btn btn-xs btn-default">
-                <i class="fa fa-lock"></i>
+                <i class="fa fa-key"></i>
                 <span class="hidden-xs">Permissions</span>
             </a>
         </div>
@@ -28,9 +28,11 @@
                     <button class="btn hidden-xs">{{ $user->email }}</button>
                     <button class="btn hidden-xs">{{ $user->created_at->format('F d, Y h:ia') }}</button>
                     <button class="btn">
+                        @foreach($user->roles()->pluck('name') as $role)
                         <span class="badge badge-success pull-left">
-                            {{  $user->roles()->pluck('name')->implode(' ') }}
+                            {{ $role }}
                         </span>
+                        @endforeach
                     </button>
                 </div>
                 <div class="btn-group pull-right" role="group" aria-label="">

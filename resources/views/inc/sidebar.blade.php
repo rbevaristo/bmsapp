@@ -14,7 +14,7 @@
                         <a href="{{ route('roles.index') }}" {!! (request()->segment(1) == 'roles') ? 'class="active"' : '' !!}><i class="fa fa-wrench fa-fw"></i> Roles</a>
                     </li>
                     <li>
-                        <a href="{{ route('permissions.index') }}" {!! (request()->segment(1) == 'permissions') ? 'class="active"' : '' !!}><i class="fa fa-lock fa-fw"></i> Permissions</a>
+                        <a href="{{ route('permissions.index') }}" {!! (request()->segment(1) == 'permissions') ? 'class="active"' : '' !!}><i class="fa fa-key fa-fw"></i> Permissions</a>
                     </li>
                 </ul>
             </li>

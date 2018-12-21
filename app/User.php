@@ -46,4 +46,14 @@ class User extends Authenticatable
         return ucfirst($value);
     }
 
+    public function scopeIsNotAdmin($query)
+    {
+        return $query->where('id', '<>', 1);
+    }
+
+    public function scopeLatest($query)
+    {
+        return $query->orderBy('created_at', 'desc');
+    }
+
 }

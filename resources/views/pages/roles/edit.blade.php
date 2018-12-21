@@ -2,33 +2,33 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Roles</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <h1><i class='fa fa-key'></i> Edit Role: {{$role->name}}</h1>
-        <hr>
-    
-        {{ Form::model($role, array('route' => array('roles.update', $role->id), 'method' => 'PUT')) }}
-    
-        <div class="form-group">
-            {{ Form::label('name', 'Role Name') }}
-            {{ Form::text('name', null, array('class' => 'form-control')) }}
+    <div class='col-lg-6 col-lg-offset-3'>
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h2><i class='fa fa-key'></i> Edit {{ $role->name }}</h2>
+            </div>
+            <div class="panel-body">
+                <form action="{{ route('roles.update', $role->id) }}" method="POST">
+                    {{ method_field('PUT') }}
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" required value="{{ $role->name }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="permissions">Permission</label>
+                        <select class="selectpicker form-control" multiple data-actions-box="true" name="permissions[]" id="permissions">
+                            @foreach($permissions as $permission)
+                                <option data-content="<span class='badge badge-success'>{{ $permission->name }}</span>" value="{{ $permission->id }}" {{ strpos($role->permissions()->pluck('name'), $permission->name) ? 'selected' : ''}}>{{ ucfirst($permission->name) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </form>
+            </div>
         </div>
-    
-        <h5><b>Assign Permissions</b></h5>
-        @foreach ($permissions as $permission)
-    
-            {{Form::checkbox('permissions[]',  $permission->id, $role->permissions ) }}
-            {{Form::label($permission->name, ucfirst($permission->name)) }}<br>
-    
-        @endforeach
-        <br>
-        {{ Form::submit('Edit', array('class' => 'btn btn-primary')) }}
-    
-        {{ Form::close() }}    
     </div>
 </div>
 @endsection
+
+@include('inc.bootstrap-select')

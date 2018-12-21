@@ -29,6 +29,7 @@
             <main class="py-4" id="page-wrapper">
                 @include('inc.breadcrumbs')
                 @include('inc.errors')
+                @include('inc.message')
                 @yield('content')
             </main>
         </div>

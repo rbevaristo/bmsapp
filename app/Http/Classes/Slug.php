@@ -1,5 +1,9 @@
 <?php
 
+use App\User;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 class Slug {
 
     public static $articles = [
@@ -19,11 +23,16 @@ class Slug {
         return $slug;
     }
 
-    public static function revert($value)
+    public static function revert($value, $model)
     {
+        if(is_numeric($value)){
+            return self::getName($model, $value);
+        }
+
         $slug = "";
         $array = explode('-', $value);
         $array_count = sizeof($array);
+        
         for ($i = 0; $i < $array_count; $i++) { 
             if(self::isArticle($array[$i])){
                 ($i == 0) ?
@@ -46,5 +55,17 @@ class Slug {
             return true;
         }
         return false;
+    }
+
+    private static function getName($model, $value){
+        switch($model) {
+            case 'permissions':
+                $model = Permission::find($value);
+                break;
+            case 'roles':
+                $model = Role::find($value);
+                break;
+        }
+        return $model->name;
     }
 }

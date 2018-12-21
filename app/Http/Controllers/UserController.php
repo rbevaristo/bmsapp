@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::isNotAdmin()->latest()->get();
         return view('pages.users.index', compact('users'));
     }
 

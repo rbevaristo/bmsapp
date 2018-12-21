@@ -56,7 +56,7 @@ class RoleController extends Controller
             $role->givePermissionTo($p);
         }
 
-        return redirect()->route('roles.index')->with('success', 'Success');
+        return redirect()->route('roles.index')->with('success', 'Role' . $role->name . ' created');
     }
 
     /**
@@ -67,7 +67,7 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        return redirect('Roles');
+        return redirect('roles');
     }
 
     /**
@@ -92,6 +92,9 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(empty($request['permissions'])){
+            return redirect()->back()->with('error', 'No permission selected');
+        }
         $role = Role::findOrFail($id);
         $input = $request->except(['permissions']);
         $permissions = $request['permissions'];
@@ -100,13 +103,13 @@ class RoleController extends Controller
         foreach($p_all as $p) {
             $role->revokePermissionTo($p);
         }
-
+       
         foreach($permissions as $permission){
             $p = Permission::where('id', $permission)->firstOrFail();
             $role->givePermissionTo($p);
         }
 
-        return redirect()->route('roles.index')->with('flash_message', 'Role' . $role->name . ' updated');
+        return redirect()->route('roles.index')->with('success', 'Role' . $role->name . ' updated');
     }
 
     /**
@@ -120,6 +123,6 @@ class RoleController extends Controller
         $role = Role::findOrFail($id);
         $role->delete();
 
-        return redirect()->route('roles.index')->with('flash_message', 'Role_deleted');
+        return redirect()->route('roles.index')->with('success', 'Role deleted!');
     }
 }

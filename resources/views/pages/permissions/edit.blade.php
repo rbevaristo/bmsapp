@@ -2,26 +2,23 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Permissions</h1>
-    </div>
-</div>
-<div class="row">
-    <div class='col-lg-4 col-lg-offset-4'>
-
-        <h1><i class='fa fa-key'></i> Edit {{$permission->name}}</h1>
-        <br>
-        {{ Form::model($permission, array('route' => array('permissions.update', $permission->id), 'method' => 'PUT')) }}{{-- Form model binding to automatically populate our fields with permission data --}}
-    
-        <div class="form-group">
-            {{ Form::label('name', 'Permission Name') }}
-            {{ Form::text('name', null, array('class' => 'form-control')) }}
+    <div class='col-lg-6 col-lg-offset-3'>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2><i class='fa fa-key'></i> Edit {{ $permission->name }}</h2>
+            </div>
+            <div class="panel-body">
+                <form action="{{ route('permissions.update', $permission->id) }}" method="POST">
+                    {{ method_field('PUT') }}
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" value="{{ $permission->name }}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Update</button>
+                </form>
+            </div>
         </div>
-        <br>
-        {{ Form::submit('Edit', array('class' => 'btn btn-primary')) }}
-    
-        {{ Form::close() }}
-    
     </div>
 </div>
 @endsection

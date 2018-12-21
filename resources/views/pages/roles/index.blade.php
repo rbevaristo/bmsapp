@@ -2,47 +2,46 @@
 
 @section('content')
 <div class="row">
-    <div class="col-md-12">
-        <h1><i class="fa fa-key"></i> Roles
-    
-            <a href="{{ route('users.index') }}" class="btn btn-default pull-right">Users</a>
-            <a href="{{ route('permissions.index') }}" class="btn btn-default pull-right">Permissions</a>
-            <a href="{{ route('roles.create') }}" class="btn btn-success pull-right">Add Role</a>
-        </h1>
-        <hr>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Role</th>
-                        <th>Permissions</th>
-                        <th>Operation</th>
-                    </tr>
-                </thead>
-    
-                <tbody>
-                    @foreach ($roles as $role)
-                    <tr>
-    
-                        <td width="250">{{ $role->name }}</td>
-    
-                        <td width="500">{{ str_replace(array('[',']','"'),'', $role->permissions()->pluck('name')) }}</td>{{-- Retrieve array of permissions associated to a role and convert to string --}}
-                        <td width="100">
-                        <a href="{{ route('roles.edit', $role->id) }}" class="btn btn-sm btn-primary pull-left" style="margin-right: 3px;">Edit</a>
-    
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy', $role->id] ]) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-sm btn-danger pull-left']) !!}
-                        {!! Form::close() !!}
-    
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-    
-            </table>
+    <div class="col-lg-12">
+        <div class="btn-group pull-right">
+            <a href="{{ route('roles.create') }}" class="btn btn-xs btn-success">
+                <i class="fa fa-wrench"></i>
+                <span class="hidden-xs">Add Role</span>
+            </a>
+            <a href="{{ route('permissions.create') }}" class="btn btn-xs btn-default">
+                <i class="fa fa-key"></i>
+                <span class="hidden-xs">Permissions</span>
+            </a>
+            <a href="{{ route('users.index') }}" class="btn btn-xs btn-default">
+                <i class="fa fa-user-plus"></i> 
+                <span class="hidden-xs">Users</span>
+            </a>
         </div>
-    
-    
+    </div>
+    <hr>
+    <div class="col-lg-12">
+        <div class="list-group">
+            @foreach ($roles as $role)
+            <div class="list-group-item">
+                <div class="btn-group" id="users-list">
+                    <button class="btn" width="250">{{ $role->name }}</button>
+                    <button class="btn">
+                        @foreach($role->permissions()->pluck('name') as $permission)
+                        <span class="badge badge-success pull-left">
+                            {{ $permission }}
+                        </span>
+                        @endforeach
+                    </button>
+                </div>
+                <div class="btn-group pull-right" role="group" aria-label="">
+                    {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy', $role->id] ]) !!}
+                    <a href="{{ route('roles.edit', $role->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i><span class="hidden-xs"> Edit</span></a>
+                    <button type="submit" class="btn btn-xs btn-danger"><i class="fa fa-times"></i> <span class="hidden-xs">Delete</span></button>
+                    {!! Form::close() !!}
+                </div>
+            </div>
+            @endforeach
+        </div>    
     </div>
 </div>
 @endsection
