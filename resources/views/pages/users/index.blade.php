@@ -4,15 +4,15 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="btn-group pull-right">
-            <a href="{{ route('users.create') }}" class="btn btn-success">
+            <a href="{{ route('users.create') }}" class="btn btn-xs btn-success">
                 <i class="fa fa-user-plus"></i> 
                 <span class="hidden-xs">Add User</span>
             </a>
-            <a href="{{ route('roles.index') }}" class="btn btn-default">
+            <a href="{{ route('roles.index') }}" class="btn btn-xs btn-default">
                 <i class="fa fa-wrench"></i>
                 <span class="hidden-xs">Roles</span>
             </a>
-            <a href="{{ route('permissions.index') }}" class="btn btn-default">
+            <a href="{{ route('permissions.index') }}" class="btn btn-xs btn-default">
                 <i class="fa fa-lock"></i>
                 <span class="hidden-xs">Permissions</span>
             </a>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="btn-group pull-right" role="group" aria-label="">
                     {!! Form::open(['method' => 'DELETE', 'route' => ['users.destroy', $user->id] ]) !!}
-                    <a href="{{ route('user.edit', $user->slug) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i><span class="hidden-xs"> Edit</span></a>
+                    <a href="{{ route('user.edit', $user->slug) }}" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i><span class="hidden-xs"> Edit</span></a>
                     <button type="submit" class="btn btn-xs btn-danger"><i class="fa fa-times"></i> <span class="hidden-xs">Delete</span></button>
                     {!! Form::close() !!}
                 </div>

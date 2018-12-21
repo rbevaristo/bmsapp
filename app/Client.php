@@ -19,4 +19,9 @@ class Client extends Model
     {
         return $this->hasOne(Address::class, 'client_id');
     }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }
