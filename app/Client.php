@@ -24,4 +24,9 @@ class Client extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    public function scopeLatest($query)
+    {
+        return $query->orderBy('created_at', 'desc');
+    }
 }

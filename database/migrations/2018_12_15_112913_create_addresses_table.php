@@ -19,6 +19,7 @@ class CreateAddressesTable extends Migration
             $table->string('street')->nullable();
             $table->string('barangay')->nullable();
             $table->string('city')->nullable();
+            $table->string('state')->nullable();
             $table->integer('postalCode')->nullable();
             $table->integer('profile_id')->unsigned()->nullable();
             $table->foreign('profile_id')->references('id')->on('profiles')->onUpdate('cascade')->onDelete('cascade');

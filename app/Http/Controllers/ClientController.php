@@ -15,8 +15,9 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('pages.clients.index');
+    {   
+        $clients = Client::latest()->simplePaginate(10);
+        return view('pages.clients.index', compact('clients'));
     }
 
     /**
@@ -38,6 +39,7 @@ class ClientController extends Controller
     public function store(ClientRequest $request)
     {
         $client = new Client;
+        $client->slug = str_slug($request->name);
         $client->name = $request->name;
         $client->contact = $request->contact;
         $client->email = $request->email;
@@ -56,7 +58,7 @@ class ClientController extends Controller
             $address->save();
 
             if($address){
-                return redirect('clients')->with('success', 'Client Added');
+                return redirect('clients')->with('success', 'Client '. $client->name.' Added');
             }
         }
         return redirect()->back()->with('error', 'Error processing request.');
