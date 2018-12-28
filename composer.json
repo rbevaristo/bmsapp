@@ -43,7 +43,8 @@
             "database/factories"
         ],
         "files": [
-            "app/Http/Classes/Slug.php"
+            "app/Http/Classes/Slug.php",
+            "app/Http/Classes/Progress.php"
         ]
     },
     "autoload-dev": {

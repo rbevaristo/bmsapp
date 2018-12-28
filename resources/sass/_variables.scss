@@ -50,3 +50,19 @@ $four: #7dbcc4;
 $three: #6C0E23;
 $two: #47682C;
 $one: #302D43;
+
+
+// Width
+$width: 100;
+
+[class*='w-'] {
+    max-width: 100%;
+    min-width: 0;
+    transition: all 0.5s;
+}
+
+@for $i from 0 through $width {
+    .w-#{$i} {
+        width: 100% - ($width - $i);
+    }
+}

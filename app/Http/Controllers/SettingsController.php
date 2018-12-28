@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Department;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller
@@ -13,7 +14,8 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        return view('pages.settings.index');
+        $departments = Department::all();
+        return view('pages.settings.index', compact('departments'));
     }
 
     /**

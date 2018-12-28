@@ -35,7 +35,16 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dept = new Department;
+        $dept->slug = str_slug($request->name);
+        $dept->name = $request->name;
+        $dept->user_id = auth()->user()->id;
+        $dept->save();
+
+        if($dept) {
+            return redirect()->back()->with('success', 'Department ' . $dept->name . ' added');
+        }
+        return redirect()->back()->with('error', 'Error Adding');
     }
 
     /**

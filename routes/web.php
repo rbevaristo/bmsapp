@@ -35,6 +35,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('permissions', 'PermissionController');
     Route::resource('users', 'UserController');
     Route::resource('clients', 'ClientController');
+    Route::resource('positions', 'PositionController');
+    Route::resource('departments', 'DepartmentController');
 });
 
 // Customizing Routes

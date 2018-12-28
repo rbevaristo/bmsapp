@@ -35,7 +35,14 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $position = new Position;
+        $position->slug = str_slug($request->name);
+        $position->name = $request->name;
+        $position->dept_id = $request->dept;
+        $position->save();
+
+        return ($position) ? redirect()->back()->with('success', 'Position ' .$position->name. ' added'):
+                            redirect()->back()->with('error', 'Error adding position');
     }
 
     /**

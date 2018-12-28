@@ -8,6 +8,11 @@ class Employee extends Model
 {
     protected $fillable = ['employee_id', 'firstname', 'lastname'];
 
+    public function getFullnameAttribute()
+    {
+        return $this->firstname . ' ' . $this->lastname;
+    }
+
     public function position()
     {
         return $this->belongsTo(Position::class);
@@ -17,4 +22,5 @@ class Employee extends Model
     {
         return $this->belongsToMany(Task::class);
     }
+
 }

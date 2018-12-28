@@ -46,15 +46,6 @@
                     <div class="col-md-6">
                         <div class='form-group'>
                             <h2>Roles</h2>
-                            {{-- @foreach ($roles as $role)
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                      <input type="checkbox" class="form-check-input" name="roles[]" value="{{ $role->id }}">
-                                      {{ ucfirst($role->name) }}
-                                    </label>
-                                </div>
-        
-                            @endforeach --}}
                             <select class="selectpicker form-control" multiple data-actions-box="true" name="roles[]">
                                 @foreach($roles as $role)
                                     <option data-content="<span class='badge badge-success'>{{ $role->name }}</span>" value="{{ $role->id }}">{{ ucfirst($role->name) }}</option>
